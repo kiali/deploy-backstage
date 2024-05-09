@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bookinfo
+  description: An example of a Kiali demo Bookinfo.
+  tags:
+    - istio
+    - kiali
+    - core
+    - servicemesh
+  annotations:
+    "backstage.io/kubernetes-namespace": bookinfo
+spec:
+  type: service
+  lifecycle: production
+  owner: user:default/guest

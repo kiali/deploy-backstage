@@ -1,0 +1,29 @@
+global:
+  dynamic:
+    plugins:
+      - disabled: false
+        integrity: sha512-WwG1cQbUHXhVZK+AG3HjzSHh+1CpFJq74ws8D/4pmlcpvoz9xsHta2AzR6D4VYQEGhxPsFWpTkG4JZEOWXKH1w==
+        package: '@janus-idp/backstage-plugin-kiali@1.17.1'
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              janus-idp.backstage-plugin-kiali:
+                appIcons:
+                  - importName: KialiIcon
+                    name: kialiIcon
+                dynamicRoutes:
+                  - importName: KialiPage
+                    menuItem:
+                      icon: kialiIcon
+                      text: Kiali
+                    path: /kiali
+      - disabled: false
+        integrity: sha512-MIB9iDlgWhYi//MZm52Z8/mNWX6xR2bqp9WwaGk6VVLTRTDGfj5JNNT7mzwy4NdX8p3JIBjbmHhcxQFNNaFg2A==
+        package: '@janus-idp/backstage-plugin-kiali-backend-dynamic@1.10.12'
+        pluginConfig:
+          catalog:
+            providers:
+              kiali:
+                skipTLSVerify: true
+                url: '${KIALI_ENDPOINT}'
+                serviceAccountToken: '${KIALI_SERVICE_ACCOUNT_TOKEN}'
