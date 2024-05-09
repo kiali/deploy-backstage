@@ -1,0 +1,39 @@
+name: Nightly yaml update
+
+on:
+  schedule:
+  # Every night at 04:00 (UTC)
+  - cron: "0 4 * * *"
+  workflow_dispatch:
+    inputs:
+      release_branch:
+        description: Branch to release
+        required: true
+        default: main
+        type: string
+jobs:
+  initialize:
+    name: Initialize
+    runs-on: ubuntu-20.04        
+    outputs:
+      target_branch: ${{ github.ref_name }}
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        ref: ${{ github.event.inputs.release_branch || github.ref_name }}      
+    - name: Log information
+      run: |
+        echo "Updating"   
+        make update
+    - name: Configure git
+      run: |
+        git config user.email 'kiali-dev@googlegroups.com'
+
+        git config user.name 'kiali-bot'        
+    - name: Update file
+      run: |
+        git add kiali.yaml
+
+        git commit -m "Update kiali.yaml to latest release"
+        git push origin

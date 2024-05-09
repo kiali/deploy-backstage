@@ -2,8 +2,8 @@ global:
   dynamic:
     plugins:
       - disabled: false
-        integrity: sha512-WwG1cQbUHXhVZK+AG3HjzSHh+1CpFJq74ws8D/4pmlcpvoz9xsHta2AzR6D4VYQEGhxPsFWpTkG4JZEOWXKH1w==
-        package: '@janus-idp/backstage-plugin-kiali@1.17.1'
+        integrity: ${KIALI_CHECKSUM}
+        package: '@janus-idp/backstage-plugin-kiali@${KIALI_VERSION}'
         pluginConfig:
           dynamicPlugins:
             frontend:
@@ -18,8 +18,8 @@ global:
                       text: Kiali
                     path: /kiali
       - disabled: false
-        integrity: sha512-MIB9iDlgWhYi//MZm52Z8/mNWX6xR2bqp9WwaGk6VVLTRTDGfj5JNNT7mzwy4NdX8p3JIBjbmHhcxQFNNaFg2A==
-        package: '@janus-idp/backstage-plugin-kiali-backend-dynamic@1.10.12'
+        integrity: ${KIALI_BACKEND_CHECKSUM}
+        package: '@janus-idp/backstage-plugin-kiali-backend-dynamic@${KIALI_BACKEND_VERSION}'
         pluginConfig:
           catalog:
             providers:
