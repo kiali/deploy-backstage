@@ -1,9 +1,9 @@
 global:
   dynamic:
     plugins:
-      - disabled: false
+      - package: '@janus-idp/backstage-plugin-kiali@${KIALI_VERSION}'
         integrity: ${KIALI_CHECKSUM}
-        package: '@janus-idp/backstage-plugin-kiali@${KIALI_VERSION}'
+        disabled: false
         pluginConfig:
           dynamicPlugins:
             frontend:
@@ -17,9 +17,9 @@ global:
                       icon: kialiIcon
                       text: Kiali
                     path: /kiali
-      - disabled: false
-        integrity: ${KIALI_BACKEND_CHECKSUM}
-        package: '@janus-idp/backstage-plugin-kiali-backend-dynamic@${KIALI_BACKEND_VERSION}'
+      - package: '@janus-idp/backstage-plugin-kiali-backend-dynamic@${KIALI_BACKEND_VERSION}'
+        integrity: ${KIALI_BACKEND_CHECKSUM}        
+        disabled: false
         pluginConfig:
           catalog:
             providers:

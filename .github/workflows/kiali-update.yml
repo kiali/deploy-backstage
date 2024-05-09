@@ -33,7 +33,12 @@ jobs:
         git config user.name 'kiali-bot'        
     - name: Update file
       run: |
-        git add kiali.yaml
-
-        git commit -m "Update kiali.yaml to latest release"
-        git push origin
+        if [[ `git status --porcelain` ]]; then
+          echo -e "\e[1;32mOK\e[0m \e[1;39mkiali yaml change detected.\e[0m"
+          git add kiali.yaml
+          git commit -m "Update kiali.yaml to latest release"
+          git push origin
+        else
+          echo -e "\e[1;39mNo changes were detected.\e[0m"
+        fi
+      shell: bash
