@@ -1,8 +1,8 @@
 global:
   dynamic:
     plugins:
-      - package: '@janus-idp/backstage-plugin-kiali@1.25.0'
-        integrity: sha512-wm+KGWpd+Pwidnmn0OKnkiOidy2rSe9PqvM8eIz25Yf+nEpE5FY7hZbuy4mOqetnX1UsQtQqrN4kzJ+bgi7aJw==
+      - package: '@janus-idp/backstage-plugin-kiali@1.26.0'
+        integrity: sha512-Zy0Wp4mW2pD0J9YmwrV98nVcGujrT5p419qMOlHwLpHmAuQHPZHNCoIA397GLa/jEUtX5cK1MJLq6kxeS/1OKw==
         disabled: false
         pluginConfig:
           dynamicPlugins:
@@ -17,8 +17,8 @@ global:
                       icon: kialiIcon
                       text: Kiali
                     path: /kiali
-      - package: '@janus-idp/backstage-plugin-kiali-backend-dynamic@1.13.1'
-        integrity: sha512-WaqKY0KsPeOnEmji2L1185Trafrof5Zx4vNf2KHYpZv5kP7WmHgQof02eVRkQFjLTwwshZlZxMKStg5uRqgBDw==        
+      - package: '@janus-idp/backstage-plugin-kiali-backend-dynamic@1.14.0'
+        integrity: sha512-l4cE6kzn3FNn3qtZqfbuHp7pcT7nAq7dtbG+DOEeKcK8kVdTWXSDfSdBytkVZWU0IjcWAOj9OdFFGLD6KKxCfA==        
         disabled: false
         pluginConfig:
           catalog:
