@@ -17,8 +17,8 @@ global:
                       icon: kialiIcon
                       text: Kiali
                     path: /kiali
-      - package: '@janus-idp/backstage-plugin-kiali-backend-dynamic@1.16.3'
-        integrity: sha512-llOGYXc1u9DLTB8VUQq9FlWZi8qq00RhtOFvPACFWjwOElts0Obsegffky7Zs4ecLLwlP6z+Mr91AIFSUL2g/A==        
+      - package: '@janus-idp/backstage-plugin-kiali-backend-dynamic@1.16.4'
+        integrity: sha512-lJcL6jobsARkujTbWPjkUncaBqAcCZtuXONomuld+tQwqm5iNFDphyJdbtVY/Mk9vbW0qKZoam3mStOGYvSUWg==        
         disabled: false
         pluginConfig:
           catalog:
