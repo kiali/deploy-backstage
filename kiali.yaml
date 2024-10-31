@@ -1,8 +1,8 @@
 global:
   dynamic:
     plugins:
-      - package: '@janus-idp/backstage-plugin-kiali@1.33.1'
-        integrity: sha512-7oQbOuE97cYyt4bUt4rAgDaDftVempj1FX+yLG4eEEBVApX3BdwHotKot0kktZJEUf5duuJ0/HXAUgFK+i7Z3A==
+      - package: '@janus-idp/backstage-plugin-kiali@1.34.0'
+        integrity: sha512-EyF10cmj+vb2+WZ+7M3rqlmj9cayJchj3rrKZoZD0acdxW5lAgEYHiq0vohhbtGQOLuS/OVXo9KhFyWMS3P/0Q==
         disabled: false
         pluginConfig:
           dynamicPlugins:
